@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks-Inspired Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            height: 50px;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-left a, .nav-right a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .nav-right a {
+            border: 1px solid black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .nav-right button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        section.hero {
+            display: flex;
+            align-items: stretch; /* Ensures equal height */
+            margin: 0 1cm; /* Add 1cm margin on left and right */
+            margin-bottom: 50px; /* Adds spacing between sections */
+            height: 18cm; /* Set height to 18cm */
+        }
+        section.hero:first-of-type {
+            margin-top: 3cm; /* Add 3cm distance from top for the first section */
+        }
+        .hero-image, .hero-text {
+            flex: 1;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%; /* Fit the 18cm height */
+            object-fit: cover; /* Ensure proper scaling of the image */
+            display: block;
+        }
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            background-color: #b0003a;
+            color: white;
+        }
+        .hero-text h1 {
+            font-size: 2.5rem;
+        }
+        .hero-text p {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        .hero-text button {
+            background-color: white;
+            color: #b0003a;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #f8f8f8;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        footer h3 {
+            margin-top: 0;
+            color: darkgreen;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin: 5px 0;
+        }
+        footer ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 150px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Starbucks_Corporation_Logo_2011.svg" alt="Logo">
+            <a href="#">Menu</a>
+            <a href="#">Rewards</a>
+            <a href="#">Gift Cards</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">Find a Store</a>
+            <a href="#">Sign In</a>
+            <button>Join Now</button>
+        </div>
+    </header>
+
+    <!-- Hero Sections -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://i.imgur.com/6KzXDP4.png" alt="Gift Card Design">
+        </div>
+        <div class="hero-text">
+            <h1>Merry Last-Minute Gifts</h1>
+            <p>There's still time to send a holiday eGift. Choose your favorite design and share some joy via text, social media, or email.</p>
+            <button>Send an eGift</button>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://i.imgur.com/6KzXDP4.png" alt="Gift Card Design">
+        </div>
+        <div class="hero-text">
+            <h1>Merry Last-Minute Gifts</h1>
+            <p>There's still time to send a holiday eGift. Choose your favorite design and share some joy via text, social media, or email.</p>
+            <button>Send an eGift</button>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://i.imgur.com/6KzXDP4.png" alt="Gift Card Design">
+        </div>
+        <div class="hero-text">
+            <h1>Merry Last-Minute Gifts</h1>
+            <p>There's still time to send a holiday eGift. Choose your favorite design and share some joy via text, social media, or email.</p>
+            <button>Send an eGift</button>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://i.imgur.com/6KzXDP4.png" alt="Gift Card Design">
+        </div>
+        <div class="hero-text">
+            <h1>Merry Last-Minute Gifts</h1>
+            <p>There's still time to send a holiday eGift. Choose your favorite design and share some joy via text, social media, or email.</p>
+            <button>Send an eGift</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="#">Our Company</a></li>
+                <li><a href="#">Our Coffee</a></li>
+                <li><a href="#">About Starbucks</a></li>
+                <li><a href="#">Starbucks Archive</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Careers</h3>
+            <ul>
+                <li><a href="#">Culture and Values</a></li>
+                <li><a href="#">Inclusion, Diversity, & Belonging</a></li>
+                <li><a href="#">College Achievement Plan</a></li>
+                <li><a href="#">Alumni Community</a></li>
+                <li><a href="#">U.S. Careers</a></li>
+                <li><a href="#">International Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Social Impact</h3>
+            <ul>
+                <li><a href="#">Communities</a></li>
+                <li><a href="#">Starbucks Foundation</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Environmental and Social Impact Reporting</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>For Business Partners</h3>
+            <ul>
+                <li><a href="#">Landlord Support Center</a></li>
+                <li><a href="#">Suppliers</a></li>
+                <li><a href="#">Corporate Gift Card Sales</a></li>
+                <li><a href="#">Office and Foodservice Coffee</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Order and Pick Up</h3>
+            <ul>
+                <li><a href="#">Order on the App</a></li>
+                <li><a href="#">Order on the Web</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Order and Pick Up Options</a></li>
+                <li><a href="#">Explore and Find Coffee for Home</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
