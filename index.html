@@ -55,6 +55,13 @@
             background-color: black;
             margin: 3px 0;
         }
+		.mobile-logo {
+            display: none;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+            right: 10px
+		}
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -69,7 +76,7 @@
         }
         .hero-image, .hero-text {
             flex: 1;
-	    display: flex;
+			display: flex;
         }
         .hero-image img {
 			max-width: 100%;
@@ -105,7 +112,7 @@
         }
         footer {
             background-color: #f8f8f8;
-            padding: 30px 20px;
+            padding: 10px 10px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -150,6 +157,9 @@
             .hamburger {
                 display: flex;
             }
+			.mobile-logo {
+               display: block; 
+           }
             .mobile-menu {
                 display: flex;
             }
@@ -184,10 +194,13 @@
             <a href="#">Sign In</a>
             <button>Join Now</button>
         </div>
+		 <img class="mobile-logo" src="https://github.com/Aysaryahya11/starbucks/blob/main/Starbucks_Corporation_Logo_2011.svg.png?raw=true" alt="Mobile Logo">
+		</div>
 		<div class="hamburger" onclick="toggleMenu()">
             <div></div>
 			<div></div>
 			<div></div>
+		<div>
     </header>
 
     <!-- Hero Sections -->
