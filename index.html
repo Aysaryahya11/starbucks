@@ -376,7 +376,7 @@
         </div>
     </footer>
 	
-<!-- Cookie Consent Banner -->
+	<!-- Cookie Consent Banner -->
     <div id="cookie-consent-banner">
         <p>We use cookies to enhance your experience. Please select your preference:</p>
         <button class="accept">Accept All</button>
@@ -401,13 +401,6 @@
         </label>
         <button id="save-preferences">Save Preferences</button>
     </div>
-	
-	<div class="cookie-banner">
-        <p>We use cookies to ensure you get the best experience on our website.</p>
-        <button class="accept" onclick="CookieChoice('Accept')">Accept All</button>
-        <button class="reject" onclick="CookieChoice('Reject')">Reject All</button>
-        <button onclick="CookieChoice('Manage My Preferences')">Manage My Preferences</button>
-    </div>
 
     <script>
         function toggleMenu() {
@@ -420,15 +413,15 @@
             ul.style.display = ul.style.display === 'block' ? 'none' : 'block';
         }
 
-	document.addEventListener('DOMContentLoaded', () => {
-	    const banner = document.getElementById('cookie-consent-banner');
-	    const preferences = document.getElementById('preference-options');
-	    const acceptBtn = document.querySelector('.accept');
-	    const rejectBtn = document.querySelector('.reject');
-	    const manageBtn = document.querySelector('.manage');
-	    const saveBtn = document.getElementById('save-preferences');
-	    const performanceCheckbox = document.getElementById('performance-cookies');
-	    const targetingCheckbox = document.getElementById('targeting-cookies');
+        document.addEventListener('DOMContentLoaded', () => {
+            const banner = document.getElementById('cookie-consent-banner');
+            const preferences = document.getElementById('preference-options');
+            const acceptBtn = document.querySelector('.accept');
+            const rejectBtn = document.querySelector('.reject');
+            const manageBtn = document.querySelector('.manage');
+            const saveBtn = document.getElementById('save-preferences');
+            const performanceCheckbox = document.getElementById('performance-cookies');
+            const targetingCheckbox = document.getElementById('targeting-cookies');
 	
 	    // Function to set Qualtrics embedded data if available
 	    const setEmbeddedData = (key, value) => {
