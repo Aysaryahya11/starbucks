@@ -422,54 +422,44 @@
             const saveBtn = document.getElementById('save-preferences');
             const performanceCheckbox = document.getElementById('performance-cookies');
             const targetingCheckbox = document.getElementById('targeting-cookies');
-	
-	    // Function to set Qualtrics embedded data if available
-	    const setEmbeddedData = (key, value) => {
-	        if (typeof Qualtrics !== 'undefined' && Qualtrics.SurveyEngine) {
-	            Qualtrics.SurveyEngine.setEmbeddedData(key, value);
-	        }
-	    };
-	
-	    // Accept All Cookies
-	    acceptBtn.addEventListener('click', () => {
-	        setEmbeddedData("accept-cookies", "Accept");
-	        localStorage.setItem('cookiePreferences', JSON.stringify({
-	            necessary: true,
-	            performance: true,
-	            targeting: true
-	        }));
-	        banner.style.display = 'none';
-	    });
-	
-	    // Reject All Cookies
-	    rejectBtn.addEventListener('click', () => {
-	        setEmbeddedData("reject", "Reject");
-	        localStorage.setItem('cookiePreferences', JSON.stringify({
-	            necessary: true,
-	            performance: false,
-	            targeting: false
-	        }));
-	        banner.style.display = 'none';
-	    });
-	
-	    // Manage Preferences
-	    manageBtn.addEventListener('click', () => {
-	        setEmbeddedData("performance-cookies", "Manage My Preferences");
-	        banner.style.display = 'none';
-	        preferences.style.display = 'block';
-	    });
-	
-	    // Save Preferences
-	    saveBtn.addEventListener('click', () => {
-	        const preferencesData = {
-	            necessary: true,
-	            performance: performanceCheckbox.checked,
-	            targeting: targetingCheckbox.checked
-	        };
-	        localStorage.setItem('cookiePreferences', JSON.stringify(preferencesData));
-	        preferences.style.display = 'none';
-	    });
-	});
+
+            // Accept All Cookies
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookiePreferences', JSON.stringify({
+                    necessary: true,
+                    performance: true,
+                    targeting: true
+                }));
+                banner.style.display = 'none';
+            });
+
+            // Reject All Cookies
+            rejectBtn.addEventListener('click', () => {
+                localStorage.setItem('cookiePreferences', JSON.stringify({
+                    necessary: true,
+                    performance: false,
+                    targeting: false
+                }));
+                banner.style.display = 'none';
+            });
+
+            // Manage Preferences
+            manageBtn.addEventListener('click', () => {
+                banner.style.display = 'none';
+                preferences.style.display = 'block';
+            });
+
+            // Save Preferences
+            saveBtn.addEventListener('click', () => {
+                const preferencesData = {
+                    necessary: true,
+                    performance: performanceCheckbox.checked,
+                    targeting: targetingCheckbox.checked
+                };
+                localStorage.setItem('cookiePreferences', JSON.stringify(preferencesData));
+                preferences.style.display = 'none';
+            });
+        });
     </script>
 </body>
 </html>
