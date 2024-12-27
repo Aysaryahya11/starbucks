@@ -459,37 +459,6 @@
                 localStorage.setItem('cookiePreferences', JSON.stringify(preferencesData));
                 preferences.style.display = 'none';
             });
-
-	    // Function to send data to Qualtrics
-	    function sendToQualtrics(choice) {
-	        const encodedChoice = encodeURIComponent(choice);
-	
-	        if (window.parent && window.parent.Qualtrics) {
-	            // Send data directly to Qualtrics Survey Engine
-	            window.parent.Qualtrics.SurveyEngine.setEmbeddedData("cookieChoice", encodedChoice);
-	            console.log(`Sent to Qualtrics: ${encodedChoice}`);
-	        } else {
-	            // Use iframe as a fallback if Qualtrics object is unavailable
-	            const iframe = document.createElement("iframe");
-	            iframe.style.display = "none";
-	            iframe.src = `https://pitt.co1.qualtrics.com/jfe/form/SV_1Gg0h1meS92qQJg?cookieChoice=${encodedChoice}`;
-	            document.body.appendChild(iframe);
-	            console.log(`Sent via iframe: ${encodedChoice}`);
-	        }
-	    }
-	
-	    // Attach event listeners to the buttons
-	    manageBtn.addEventListener("click", () => {
-	        sendToQualtrics("Manage Preferences");
-	    });
-	
-	    acceptBtn.addEventListener("click", () => {
-	        sendToQualtrics("Accept");
-	    });
-	
-	    rejectBtn.addEventListener("click", () => {
-	        sendToQualtrics("Reject");
-	    });
 	});
 </script>
 </body>
