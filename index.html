@@ -253,6 +253,21 @@
             color: white;
             cursor: pointer;
         }
+		
+		/* Fade-out Animation */
+        .fade-out {
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
     </style>
 </head>
 <body>
@@ -385,6 +400,13 @@
             Targeting Cookies
         </label>
         <button id="save-preferences">Save Preferences</button>
+    </div>
+	
+	<div class="cookie-banner">
+        <p>We use cookies to ensure you get the best experience on our website.</p>
+        <button class="accept" onclick="CookieChoice('Accept')">Accept All</button>
+        <button class="reject" onclick="CookieChoice('Reject')">Reject All</button>
+        <button onclick="CookieChoice('Manage My Preferences')">Manage My Preferences</button>
     </div>
 
     <script>
