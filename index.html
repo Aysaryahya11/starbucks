@@ -430,9 +430,16 @@
 	    const performanceCheckbox = document.getElementById('performance-cookies');
 	    const targetingCheckbox = document.getElementById('targeting-cookies');
 	
+	    // Function to set Qualtrics embedded data if available
+	    const setEmbeddedData = (key, value) => {
+	        if (typeof Qualtrics !== 'undefined' && Qualtrics.SurveyEngine) {
+	            Qualtrics.SurveyEngine.setEmbeddedData(key, value);
+	        }
+	    };
+	
 	    // Accept All Cookies
 	    acceptBtn.addEventListener('click', () => {
-	        Qualtrics.SurveyEngine.setEmbeddedData("accept", "Accept");
+	        setEmbeddedData("accept-cookies", "Accept");
 	        localStorage.setItem('cookiePreferences', JSON.stringify({
 	            necessary: true,
 	            performance: true,
@@ -443,7 +450,7 @@
 	
 	    // Reject All Cookies
 	    rejectBtn.addEventListener('click', () => {
-	        Qualtrics.SurveyEngine.setEmbeddedData("reject", "Reject");
+	        setEmbeddedData("reject", "Reject");
 	        localStorage.setItem('cookiePreferences', JSON.stringify({
 	            necessary: true,
 	            performance: false,
@@ -454,7 +461,7 @@
 	
 	    // Manage Preferences
 	    manageBtn.addEventListener('click', () => {
-	        Qualtrics.SurveyEngine.setEmbeddedData("performance-cookies", "Manage My Preferences");
+	        setEmbeddedData("performance-cookies", "Manage My Preferences");
 	        banner.style.display = 'none';
 	        preferences.style.display = 'block';
 	    });
